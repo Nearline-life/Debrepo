@@ -1,0 +1,8 @@
+#!/bin/bash
+mkdir $1.d
+mount -o loop -t iso9660 $1 /mnt
+cd $1.d
+cp -rv /mnt/* ./
+cd ..
+umount /mnt
+rm $1

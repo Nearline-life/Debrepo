@@ -1,0 +1,24 @@
+#!/bin/bash
+#write sources
+rm nearline.list
+for DIRECTORY in $(ls *.d -d );
+  do
+	  MAIN=""
+	  CONTRIB=""
+	  NONFREE=""
+
+if [ -d "${DIRECTORY}/dists/stable/main" ]; then
+	  MAIN="main"
+fi
+
+if [ -d "${DIRECTORY}/dists/stable/contrib" ]; then
+	  CONTRIB="contrib"
+fi
+
+if [ -d "${DIRECTORY}/dists/stable/non-free" ]; then
+	  NONFREE="non-free"
+fi
+
+echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE
+echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE >> nearline.list
+done
