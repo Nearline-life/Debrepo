@@ -23,15 +23,14 @@ make sure all the scripts are writable, and run setup. this ensure all needed, a
 2. remove the comment from rm debian-update*
 3. update gen-src to reffer to your server
 
-
-. run get-updates.
+4. run get-updates.
 this will
-. download the jigdo files.
-. assemble the jigdo files into isos
-. un-pack the isos into directories
-. generate apt source listings
-. to be done - pack source listings into the local repo
-. refresh the local repo content
+- download the jigdo files.
+- assemble the jigdo files into isos
+- un-pack the isos into directories
+- generate apt source listings
+- to be done - pack source listings into the local repo
+- refresh the local repo content
 
 # Local repo
 Primarily this is used to ensure all users have the requisite apt repo list
