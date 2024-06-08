@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir got
+apt install jigdo* apache2 vim mc git 
