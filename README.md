@@ -1,3 +1,7 @@
+# Caution.
+there are no best-practices here..
+in fact it's anti-best-practice here, for a very specific use case
+
 # Debrepo
 one of the early steps to going nearline is to get a local repository.
 
