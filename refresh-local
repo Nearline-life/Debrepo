@@ -1,0 +1,7 @@
+#!/bin/bash
+cd /var/www/html/local
+chown root:root /var/www/html/local/*
+dpkg-scanpackages -m .  > Release
+dpkg-scanpackages -m . | gzip -c > Packages.gz
+ls *.deb |wc -l
+

@@ -5,12 +5,14 @@ find cdimage.debian.org -type f -exec cp {} ./ \;
 cd got
 find  -type f -exec rm ../{} \;
 cd ..
-#rm debian-12*
+rm debian-12*
+#rm debian-update*
 #jigsaw download the iso's
 find -maxdepth 1 -type f -name '*.jigdo' -exec jigdo-lite {} \;
 find -maxdepth 1 -type f -name '*.iso' -exec ./unpack-iso {} \;
 #generate new source file
 ./gen-src
+./refresh-local
 
 #cleanup
 find -maxdepth 1 -type f -name '*.jigdo' -exec mv {} got/ \;

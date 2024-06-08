@@ -22,3 +22,4 @@ fi
 echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE
 echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE >> nearline.list
 done
+echo deb [trusted=yes] http://deb12.home/local ./ >> nearline.list
