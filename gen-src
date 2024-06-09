@@ -23,3 +23,8 @@ echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NON
 echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE >> nearline.list
 done
 echo deb [trusted=yes] http://deb12.home/local ./ >> nearline.list
+
+cp nearline.list /var/www/html/list/etc/apt/sources.list.d/
+dpkg-deb --root-owner-group --build list
+cp list.deb local/
+

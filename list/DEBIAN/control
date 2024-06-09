@@ -1,0 +1,8 @@
+Package: nealine-list
+Version: 1.0-1
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: phaedra <phaedra@imp3r1al.space
+Description: nearline package list
+ it'll set up your sources.list.d folder
