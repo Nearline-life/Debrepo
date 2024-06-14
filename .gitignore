@@ -1,0 +1,8 @@
+*.d
+got
+cdimage.debian.org
+*cache.db
+list.deb
+nearline.list
+robots.txt.*
+local

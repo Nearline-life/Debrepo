@@ -1,5 +1,5 @@
 #!/bin/bash
-wget -r -np -l 1 -A jigdo,template https://cdimage.debian.org/debian-cd/current/amd64/jigdo-dvd/
+wget -c -r -np -l 1 -A jigdo,template https://cdimage.debian.org/debian-cd/current/amd64/jigdo-dvd/
 
 find cdimage.debian.org -type f -exec cp {} ./ \;
 cd got
