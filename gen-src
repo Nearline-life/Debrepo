@@ -1,5 +1,6 @@
 #!/bin/bash
 #write sources
+DIST="bookworm"
 rm nearline.list
 for DIRECTORY in $(ls *.d -d );
   do
@@ -7,20 +8,20 @@ for DIRECTORY in $(ls *.d -d );
 	  CONTRIB=""
 	  NONFREE=""
 
-if [ -d "${DIRECTORY}/dists/stable/main" ]; then
+if [ -d "${DIRECTORY}/dists/${DIST}/main" ]; then
 	  MAIN="main"
 fi
 
-if [ -d "${DIRECTORY}/dists/stable/contrib" ]; then
+if [ -d "${DIRECTORY}/dists/${DIST}/contrib" ]; then
 	  CONTRIB="contrib"
 fi
 
-if [ -d "${DIRECTORY}/dists/stable/non-free" ]; then
+if [ -d "${DIRECTORY}/dists/${DIST}/non-free" ]; then
 	  NONFREE="non-free"
 fi
 
-echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE
-echo deb [trusted=yes] http://deb12.home/${DIRECTORY} stable $MAIN $CONTRIB $NONFREE >> nearline.list
+echo deb [trusted=yes] http://deb12.home/${DIRECTORY} ${DIST} $MAIN $CONTRIB $NONFREE
+echo deb [trusted=yes] http://deb12.home/${DIRECTORY} ${DIST} $MAIN $CONTRIB $NONFREE >> nearline.list
 done
 echo deb [trusted=yes] http://deb12.home/local ./ >> nearline.list
 
