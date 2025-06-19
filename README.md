@@ -7,6 +7,9 @@ one of the early steps to going nearline is to get a local repository.
 
 since i use debian, that's what i'll set up
 
+# user account
+jigdo no linger works as root.. i don't care why, just chown your var/www/html dir 
+
 # iso's vs Proper mirror
 so, why's this repo based around the isos rather than a propper mirror.
 
